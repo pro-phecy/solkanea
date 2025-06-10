@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium transition-all duration-300 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply text-white bg-primary-600 hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply text-primary-700 bg-primary-100 hover:bg-primary-200 focus:ring-primary-500;
+  }
+  
+  .heading-xl {
+    @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl;
+  }
+  
+  .heading-lg {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl;
+  }
+  
+  .heading-md {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
